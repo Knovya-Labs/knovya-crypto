@@ -1,0 +1,35 @@
+# CODEOWNERS — knovya-labs/knovya-crypto
+#
+# Lines in this file assign default reviewers to paths. GitHub
+# automatically requests review from the owners when a pull request
+# modifies a matching file.
+#
+# Until the public launch, the `@knovya-labs/crypto-maintainers`
+# team is a placeholder. The real team is created on GitHub in the
+# hour before the repository is made public, with the founding
+# maintainer as initial owner. Subsequent maintainers are added by
+# explicit PR.
+#
+# Syntax reference: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for anything in the repo
+*                               @knovya-labs/crypto-maintainers
+
+# Cryptographic surface — extra review sensitivity
+/crypto/                        @knovya-labs/crypto-maintainers
+/crypto/types.ts                @knovya-labs/crypto-maintainers
+/crypto/frontend/               @knovya-labs/crypto-maintainers
+/crypto/backend/                @knovya-labs/crypto-maintainers
+
+# Security policy and disclosure channel
+/SECURITY.md                    @knovya-labs/crypto-maintainers
+/.github/SECURITY.md            @knovya-labs/crypto-maintainers
+/PGP-PUBLIC-KEY.asc             @knovya-labs/crypto-maintainers
+
+# CI workflows — a bad edit here can silently disable the audit gate
+/.github/workflows/             @knovya-labs/crypto-maintainers
+
+# Whitepaper + audit history — any change must be reviewed by a maintainer
+# with whitepaper context.
+/docs/whitepaper/               @knovya-labs/crypto-maintainers
+/docs/audit-history.md          @knovya-labs/crypto-maintainers
